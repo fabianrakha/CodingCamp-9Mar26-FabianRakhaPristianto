@@ -5,11 +5,24 @@ margin:0;
 color:#333;
 min-height:100vh;
 }
+
+/* TITLE */
+
+.title{
+text-align:center;
+color:white;
+margin-top:30px;
+}
+
+/* CONTAINER */
+
 .container{
 width:900px;
 margin:auto;
 padding-top:40px;
 }
+
+/* CARD */
 
 .card{
 background:white;
@@ -18,20 +31,28 @@ border-radius:12px;
 margin-bottom:20px;
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 transition:0.3s;
+animation: fadeSlide 0.8s ease;
 }
 
 .card:hover{
 transform:translateY(-5px);
 }
+
+/* GRID */
+
 .grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:20px;
 }
 
+/* GREETING */
+
 .greeting{
 text-align:center;
 }
+
+/* BUTTON */
 
 button{
 padding:10px 14px;
@@ -49,12 +70,22 @@ background:#0049b7;
 transform:scale(1.05);
 }
 
+/* INPUT */
+
 input{
 padding:10px;
 margin:5px;
 border-radius:6px;
 border:1px solid #ddd;
 }
+
+input:focus{
+outline:none;
+border:1px solid #0072ff;
+box-shadow:0 0 5px rgba(0,114,255,0.4);
+}
+
+/* TODO LIST */
 
 li{
 list-style:none;
@@ -68,38 +99,25 @@ align-items:center;
 animation: slideIn 0.4s ease;
 }
 
-@keyframes fadeIn{
-from{
-opacity:0;
-}
-to{
-opacity:1;
-}
+/* QUICK LINKS */
+
+#links div{
+margin:8px 0;
 }
 
-@keyframes slideIn{
-from{
-transform:translateX(-20px);
-opacity:0;
+#links a{
+text-decoration:none;
+color:#0072ff;
+font-weight:bold;
+margin-right:10px;
 }
-to{
-transform:translateX(0);
-opacity:1;
+
+#links a:hover{
+text-decoration:underline;
 }
-}
-@keyframes fadeSlide{
-0%{
-opacity:0;
-transform:translateY(20px);
-}
-100%{
-opacity:1;
-transform:translateY(0);
-}
-}
-.card{
-animation: fadeSlide 0.8s ease;
-}
+
+/* FORM */
+
 .link-form{
 display:flex;
 align-items:flex-end;
@@ -118,6 +136,32 @@ border-radius:8px;
 border:1px solid #ccc;
 }
 
+/* ANIMATIONS */
+
+@keyframes slideIn{
+from{
+transform:translateX(-20px);
+opacity:0;
+}
+to{
+transform:translateX(0);
+opacity:1;
+}
+}
+
+@keyframes fadeSlide{
+0%{
+opacity:0;
+transform:translateY(20px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVE */
+
 @media(max-width:768px){
 
 .container{
@@ -130,8 +174,31 @@ grid-template-columns:1fr;
 
 }
 
-.title{
-text-align:center;
+/* DARK MODE */
+
+.dark{
+background:#121212;
 color:white;
-margin-top:30px;
+}
+
+.dark .card{
+background:#2a2a2a;
+}
+
+.dark li{
+background:#333;
+}
+
+.dark input{
+background:#333;
+color:white;
+border:1px solid #555;
+}
+
+.dark button{
+background:#444;
+}
+
+.dark button:hover{
+background:#666;
 }

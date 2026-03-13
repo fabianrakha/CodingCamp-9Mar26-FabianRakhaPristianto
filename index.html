@@ -11,7 +11,6 @@
 
 <h1 class="title">Dashboard Fabian Rakha Pristianto</h1>
 
-
 <main class="container">
 
 <!-- Greeting -->
@@ -31,12 +30,10 @@
 <button onclick="startTimer()">Mulai</button>
 <button onclick="stopTimer()">Berhenti</button>
 <button onclick="resetTimer()">Reset</button>
-
 </div>
 
 <!-- Todo List -->
 <div class="card">
-
 <h3>Daftar Tugas</h3>
 
 <label for="taskInput">Tambah Tugas</label>
@@ -45,11 +42,9 @@
 <button onclick="addTask()">Tambah</button>
 
 <ul id="taskList"></ul>
-
 </div>
 
 <!-- Quick Links -->
-
 <div class="card">
 
 <h3>Link Cepat</h3>
@@ -74,7 +69,17 @@
 
 </div>
 
-</div> <!-- PENUTUP GRID -->
+</div>
+
+<!-- Custom Name -->
+<div class="card">
+<h3>Masukkan Nama</h3>
+<input type="text" id="nameInput" placeholder="Masukkan nama">
+<button onclick="saveName()">Simpan</button>
+</div>
+
+<!-- Dark Mode -->
+<button onclick="toggleTheme()">Mode Gelap / Terang</button>
 
 </main>
 
