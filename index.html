@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Fabian Rakha Pristianto</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1 class="title">Dashboard Fabian Rakha Pristianto</h1>
+
+
+<main class="container">
+
+<!-- Greeting -->
+<div class="card greeting">
+<h1 id="time"></h1>
+<p id="date"></p>
+<h2 id="greeting"></h2>
+</div>
+
+<div class="grid">
+
+<!-- Focus Timer -->
+<div class="card">
+<h3>Timer Fokus</h3>
+<h1 id="timer">25:00</h1>
+
+<button onclick="startTimer()">Mulai</button>
+<button onclick="stopTimer()">Berhenti</button>
+<button onclick="resetTimer()">Reset</button>
+
+</div>
+
+<!-- Todo List -->
+<div class="card">
+
+<h3>Daftar Tugas</h3>
+
+<label for="taskInput">Tambah Tugas</label>
+<input type="text" id="taskInput" placeholder="Tambahkan tugas baru" required>
+
+<button onclick="addTask()">Tambah</button>
+
+<ul id="taskList"></ul>
+
+</div>
+
+<!-- Quick Links -->
+
+<div class="card">
+
+<h3>Link Cepat</h3>
+
+<div class="link-form">
+
+<div class="form-group">
+<label for="linkName">Nama Link</label>
+<input type="text" id="linkName" placeholder="Nama Link">
+</div>
+
+<div class="form-group">
+<label for="linkURL">Alamat Website</label>
+<input type="url" id="linkURL" placeholder="Alamat Website">
+</div>
+
+<button onclick="addLink()">Tambah Link</button>
+
+</div>
+
+<div id="links"></div>
+
+</div>
+
+</div> <!-- PENUTUP GRID -->
+
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
